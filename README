@@ -1,0 +1,23 @@
+original scripts : https://github.com/jbfavre/python-zabbix/tree/master/scripts
+original templates : https://github.com/jbfavre/python-zabbix/tree/master/templates
+
+script were not modified a lot
+templates however has been added a few triggers and items rules
+
+Require : 
+- hpasmcli (provided by hp-health)
+- hpssacli (provided by hpssacli)
+
+Perls scripts must be run trough zabbix-sender using a crontab (see hp_hard.cron)
+
+regexp must be added to http://yourzabbixserver/zabbix/adm.regexps.php (administration > general > regular expression) or discovery rules wont work (=99% of the templates)
+There is however no way to export those regexp ... so you have to add them by hand
+Example for :
+HP Hardware Fans for discovery			regexp=^(fan)[0-9]+$				[Result is TRUE] [case sensitive=no]
+HP Hardware Power for discovery			regexp=^(power)[0-9]+$				[Result is TRUE] [case sensitive=no]
+HP Hardware Raid controller for discovery	regexp=^(controller)[0-9]+$			[Result is TRUE] [case sensitive=no]
+HP Hardware Raid logical drive for discovery	regexp=^(logicaldrive)[0-9]+$			[Result is TRUE] [case sensitive=no]
+HP Hardware Raid physical drive for discovery	regexp=^(physicaldrive)[0-9]I:[0-9]:[0-9]$	[Result is TRUE] [case sensitive=no]
+HP Hardware Temperature for discovery		regexp=^(temp)[0-9]+$				[Result is TRUE] [case sensitive=no]
+
+You can activate templates individually on your hosts, or just activate "BBC Template - HP Hardware" which is linked to the other ones
