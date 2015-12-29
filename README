@@ -21,3 +21,7 @@ HP Hardware Raid physical drive for discovery	regexp=^(physicaldrive)[0-9]I:[0-9
 HP Hardware Temperature for discovery		regexp=^(temp)[0-9]+$				[Result is TRUE] [case sensitive=no]
 
 You can activate templates individually on your hosts, or just activate "BBC Template - HP Hardware" which is linked to the other ones
+
+You might need to update the regexp for fan and temp to work properly in :
+- hp_hard_fan.pl line 37
+- hp_hard_temp.pl line 32
