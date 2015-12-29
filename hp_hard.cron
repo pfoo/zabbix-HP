@@ -1,0 +1,12 @@
+*/5 * * * *     root /srv/zabbix/hp_hard_fan.pl | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+*/5 * * * *     root /srv/zabbix/hp_hard_fan.pl discovery | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+#don't see the point of upgradng pwr data every 5min (considering I do not have powermeter data)
+*/30 * * * *     root /srv/zabbix/hp_hard_pwr.pl | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+*/30 * * * *     root /srv/zabbix/hp_hard_pwr.pl discovery | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+#same here, it's an hardware cntroller after all
+*/60 * * * *     root /srv/zabbix/hp_hard_raid.pl | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+*/60 * * * *     root /srv/zabbix/hp_hard_raid.pl discovery | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+*/5 * * * *     root /srv/zabbix/hp_hard_temp.pl | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+*/5 * * * *     root /srv/zabbix/hp_hard_temp.pl discovery | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+#update IML status every 30m should be enough
+*/30 * * * *     root /srv/zabbix/hp_hard_hpiml.pl | /usr/bin/zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
