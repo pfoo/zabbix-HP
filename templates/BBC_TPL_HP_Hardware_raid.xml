@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>2.0</version>
-    <date>2015-12-08T18:21:04Z</date>
+    <version>3.2</version>
+    <date>2017-08-07T07:14:21Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -79,7 +79,7 @@
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},battery_capacitor_status]</key>
                             <delay>0</delay>
                             <history>1</history>
-                            <trends>365</trends>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
@@ -118,178 +118,7 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Battery/Capacitor Temperature for controller {#CONTROLLERID}</name>
-                            <type>2</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},capacitor_temperature]</key>
-                            <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units>°C</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>HP Hardware Raid Controller</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Cache Module available size for controller {#CONTROLLERID}</name>
-                            <type>2</type>
-                            <snmp_community/>
-                            <multiplier>1</multiplier>
-                            <snmp_oid/>
-                            <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},total_cache_memory_available]</key>
-                            <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>B</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1048576</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>HP Hardware Raid Controller</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Cache Module read ratio for controller {#CONTROLLERID}</name>
-                            <type>2</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_read_ratio]</key>
-                            <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units>%</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>HP Hardware Raid Controller</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Cache Module status for controller {#CONTROLLERID}</name>
-                            <type>2</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_status]</key>
-                            <delay>0</delay>
-                            <history>1</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>HP Hardware Raid Controller</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
                             <name>Cache Module Temperature for controller {#CONTROLLERID}</name>
@@ -333,6 +162,95 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Cache Module read ratio for controller {#CONTROLLERID}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_read_ratio]</key>
+                            <delay>0</delay>
+                            <history>7</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>%</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>HP Hardware Raid Controller</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Cache Module status for controller {#CONTROLLERID}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_status]</key>
+                            <delay>0</delay>
+                            <history>1</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>HP Hardware Raid Controller</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
                             <name>Cache Module write ratio for controller {#CONTROLLERID}</name>
@@ -376,6 +294,51 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Battery/Capacitor Temperature for controller {#CONTROLLERID}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},capacitor_temperature]</key>
+                            <delay>0</delay>
+                            <history>7</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>°C</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>HP Hardware Raid Controller</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
                             <name>Controller {#CONTROLLERID} status</name>
@@ -386,7 +349,7 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},controller_status]</key>
                             <delay>0</delay>
                             <history>1</history>
-                            <trends>365</trends>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
@@ -419,6 +382,7 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
                             <name>Controller {#CONTROLLERID} Temperature</name>
@@ -462,35 +426,101 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Cache Module available size for controller {#CONTROLLERID}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>1</multiplier>
+                            <snmp_oid/>
+                            <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},total_cache_memory_available]</key>
+                            <delay>0</delay>
+                            <history>7</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>B</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1048576</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>HP Hardware Raid Controller</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>{BBC_TPL_HP_Hardware_raid:hp.hardware.raid.controller[{#CONTROLLERSLOT},battery_capacitor_status].str(OK)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
                             <name>Battery/Capacitor status for RAID controller {#CONTROLLERID} is not OK</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>2</priority>
                             <description>Battery/Capacitor for RAID controller {#CONTROLLERID} is deffective.</description>
                             <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{BBC_TPL_HP_Hardware_raid:hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_status].str(OK)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
                             <name>Cache Module status for RAID controller {#CONTROLLERID} is not OK</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>2</priority>
                             <description>Cache Module for RAID controller {#CONTROLLERID} is deffective.</description>
                             <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{BBC_TPL_HP_Hardware_raid:hp.hardware.raid.controller[{#CONTROLLERSLOT},controller_status].str(OK)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
                             <name>Controller status for RAID controller {#CONTROLLERID} is not OK</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>5</priority>
                             <description>RAID controller {#CONTROLLERID} is deffective.</description>
                             <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
                         </trigger_prototype>
                     </trigger_prototypes>
                     <graph_prototypes>
@@ -602,7 +632,7 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <key>hp.hardware.raid.logicaldrive[{#CONTROLLERSLOT}:{#LOGICALDRIVESLOT},status]</key>
                             <delay>0</delay>
                             <history>7</history>
-                            <trends>365</trends>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
                             <allowed_hosts/>
@@ -638,17 +668,25 @@ Controller: {#CONTROLLERSLOT}</description>
                                 <name>HP Insight System Status</name>
                             </valuemap>
                             <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>{BBC_TPL_HP_Hardware_raid:hp.hardware.raid.logicaldrive[{#CONTROLLERSLOT}:{#LOGICALDRIVESLOT},status].str(OK)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
                             <name>Logical array {#LOGICALDRIVEID} on RAID controller {#CONTROLLERSLOT} is not OK</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>1</priority>
                             <description>Status is not OK for logical array {#LOGICALDRIVEID} on RAID controller {#CONTROLLERSLOT}</description>
                             <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
                         </trigger_prototype>
                     </trigger_prototypes>
                     <graph_prototypes/>
@@ -703,7 +741,7 @@ Controller: {#CONTROLLERSLOT}</description>
                             <key>hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},status]</key>
                             <delay>0</delay>
                             <history>7</history>
-                            <trends>365</trends>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
                             <allowed_hosts/>
@@ -742,26 +780,54 @@ Bay:         {#PHYSICALDRIVEBAY}</description>
                                 <name>HP Insight System Status</name>
                             </valuemap>
                             <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>{BBC_TPL_HP_Hardware_raid:hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},status].str(OK,600)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
                             <name>Physical drive {#PHYSICALDRIVESLOT} on RAID controller {#CONTROLLERSLOT} failure</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
                             <description>A physical drive is failing on RAID controller {#CONTROLLERSLOT} at drive {#PHYSICALDRIVESLOT}</description>
                             <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
                         </trigger_prototype>
                     </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
+            <httptests/>
             <macros/>
             <templates/>
             <screens/>
         </template>
     </templates>
+    <value_maps>
+        <value_map>
+            <name>HP Insight System Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Degraded</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
 </zabbix_export>

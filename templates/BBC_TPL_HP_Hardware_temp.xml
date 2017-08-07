@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>2.0</version>
-    <date>2015-12-08T18:20:41Z</date>
+    <version>3.2</version>
+    <date>2017-08-07T07:16:06Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -109,6 +109,7 @@ Tresh: {#TEMPTHRES}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
                             <name>Status of sensor $1 {#TEMPLOCATION}</name>
@@ -119,7 +120,7 @@ Tresh: {#TEMPTHRES}</description>
                             <key>hp.hardware.temp[{#TEMPSLOT},status]</key>
                             <delay>0</delay>
                             <history>7</history>
-                            <trends>365</trends>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
                             <allowed_hosts/>
@@ -155,22 +156,34 @@ Tresh: {#TEMPTHRES}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <application_prototypes/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>{BBC_TPL_HP_Hardware_temp:hp.hardware.temp[{#TEMPSLOT},current].last()}&gt;{#TEMPTHRES}</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
                             <name>Temperature for sensor {#TEMPSLOT} {#TEMPLOCATION} is over threshold</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
                             <description>High temperature for sensor {#TEMPSLOT} {#TEMPLOCATION} detected !&#13;
 Current temperature is over {#TEMPTHRES} !</description>
                             <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{BBC_TPL_HP_Hardware_temp:hp.hardware.temp[{#TEMPSLOT},status].str(Normal)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
                             <name>Temperature status for sensor {#TEMPSLOT} {#TEMPLOCATION} is not NORMAL</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
@@ -179,6 +192,9 @@ Current temperature is over {#TEMPTHRES} !</description>
 if reported string = Normal =&gt; ok, do nothing&#13;
 if reported string != Normal =&gt; fire alert</description>
                             <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
                         </trigger_prototype>
                     </trigger_prototypes>
                     <graph_prototypes>
@@ -218,6 +234,7 @@ if reported string != Normal =&gt; fire alert</description>
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
+            <httptests/>
             <macros/>
             <templates/>
             <screens/>
