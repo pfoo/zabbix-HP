@@ -100,6 +100,7 @@ sub getInfo {
         }
       }
     }
+    close(HPACUPD);
 
   }
   if (defined($controllerthash{'slot'})) {
