@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.2</version>
-    <date>2017-08-07T07:14:21Z</date>
+    <version>3.4</version>
+    <date>2017-09-09T15:14:57Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -46,7 +46,6 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -67,24 +66,22 @@
                             </condition>
                         </conditions>
                     </filter>
-                    <lifetime>7</lifetime>
+                    <lifetime>1w</lifetime>
                     <description>Discovery of hardware raid controller as defined in global regular expression &quot;HP Hardware Raid controller for discovery&quot;.</description>
                     <item_prototypes>
                         <item_prototype>
                             <name>Battery/Capacitor status for controller {#CONTROLLERID}</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},battery_capacitor_status]</key>
                             <delay>0</delay>
-                            <history>1</history>
+                            <history>1d</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -92,11 +89,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -118,23 +112,24 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Cache Module Temperature for controller {#CONTROLLERID}</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_module_temperature]</key>
                             <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
+                            <history>1w</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>°C</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -142,11 +137,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -162,23 +154,24 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Cache Module read ratio for controller {#CONTROLLERID}</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_read_ratio]</key>
                             <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
+                            <history>1w</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>%</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -186,11 +179,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -206,23 +196,24 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Cache Module status for controller {#CONTROLLERID}</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_status]</key>
                             <delay>0</delay>
-                            <history>1</history>
+                            <history>1d</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -230,11 +221,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -250,23 +238,24 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Cache Module write ratio for controller {#CONTROLLERID}</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},cache_write_ratio]</key>
                             <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
+                            <history>1w</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>%</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -274,11 +263,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -294,23 +280,24 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Battery/Capacitor Temperature for controller {#CONTROLLERID}</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},capacitor_temperature]</key>
                             <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
+                            <history>1w</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>°C</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -318,11 +305,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -338,23 +322,24 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Controller {#CONTROLLERID} status</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},controller_status]</key>
                             <delay>0</delay>
-                            <history>1</history>
+                            <history>1d</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -362,11 +347,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -382,23 +364,24 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Controller {#CONTROLLERID} Temperature</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},controller_temperature]</key>
                             <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
+                            <history>1w</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>°C</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -406,11 +389,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -426,23 +406,24 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Cache Module available size for controller {#CONTROLLERID}</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>1</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.controller[{#CONTROLLERSLOT},total_cache_memory_available]</key>
                             <delay>0</delay>
-                            <history>7</history>
-                            <trends>365</trends>
+                            <history>1w</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
                             <units>B</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -450,11 +431,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1048576</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -470,7 +448,15 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing>
+                                <step>
+                                    <type>1</type>
+                                    <params>1048576</params>
+                                </step>
+                            </preprocessing>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
@@ -582,6 +568,7 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                         </graph_prototype>
                     </graph_prototypes>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>HP hardware raid logical drive discovery</name>
@@ -599,7 +586,6 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -620,24 +606,22 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             </condition>
                         </conditions>
                     </filter>
-                    <lifetime>7</lifetime>
+                    <lifetime>1w</lifetime>
                     <description>Discovery of hardware raid logical drive as defined in global regular expression &quot;HP Hardware Raid logical drive for discovery&quot;.</description>
                     <item_prototypes>
                         <item_prototype>
                             <name>Logical drive {#LOGICALDRIVESLOT} on controler {#CONTROLLERSLOT} status</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>hp.hardware.raid.logicaldrive[{#CONTROLLERSLOT}:{#LOGICALDRIVESLOT},status]</key>
                             <delay>0</delay>
-                            <history>7</history>
+                            <history>1w</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -645,11 +629,8 @@ Cache memory: {#CONTROLLERCACHEMEMORY}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -668,7 +649,10 @@ Controller: {#CONTROLLERSLOT}</description>
                                 <name>HP Insight System Status</name>
                             </valuemap>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
@@ -691,6 +675,7 @@ Controller: {#CONTROLLERSLOT}</description>
                     </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>HP hardware raid physical drive discovery</name>
@@ -708,7 +693,6 @@ Controller: {#CONTROLLERSLOT}</description>
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -729,24 +713,22 @@ Controller: {#CONTROLLERSLOT}</description>
                             </condition>
                         </conditions>
                     </filter>
-                    <lifetime>7</lifetime>
+                    <lifetime>1w</lifetime>
                     <description>Discovery of hardware raid physical drive as defined in global regular expression &quot;HP Hardware Raid physical drive for discovery&quot;.</description>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Physical drive {#PHYSICALDRIVESLOT} on controler {#CONTROLLERSLOT} status</name>
+                            <name>Physical drive {#PHYSICALDRIVESLOT} on controler {#CONTROLLERSLOT} Current Temperature</name>
                             <type>2</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},status]</key>
+                            <key>hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},current_temperature]</key>
                             <delay>0</delay>
-                            <history>7</history>
-                            <trends>0</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
-                            <value_type>1</value_type>
+                            <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
+                            <units>°C</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -754,11 +736,100 @@ Controller: {#CONTROLLERSLOT}</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Physical drive temperature:&#13;
+Controler: {#CONTROLLERSLOT}&#13;
+Port:        {#PHYSICALDRIVEPORT}&#13;
+Box:         {#PHYSICALDRIVEBOX}&#13;
+Bay:         {#PHYSICALDRIVEBAY}</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>HP Hardware Raid Physical Drive</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes/>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Physical drive {#PHYSICALDRIVESLOT} on controler {#CONTROLLERSLOT} Maximum Temperature</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},maximum_temperature]</key>
+                            <delay>0</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>°C</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Physical drive maximum temperature:&#13;
+Controler: {#CONTROLLERSLOT}&#13;
+Port:        {#PHYSICALDRIVEPORT}&#13;
+Box:         {#PHYSICALDRIVEBOX}&#13;
+Bay:         {#PHYSICALDRIVEBAY}</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>HP Hardware Raid Physical Drive</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes/>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Physical drive {#PHYSICALDRIVESLOT} on controler {#CONTROLLERSLOT} status</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},status]</key>
+                            <delay>0</delay>
+                            <history>1w</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -780,10 +851,29 @@ Bay:         {#PHYSICALDRIVEBAY}</description>
                                 <name>HP Insight System Status</name>
                             </valuemap>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{BBC_TPL_HP_Hardware_raid:hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},current_temperature].last()}&gt;50</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Physical drive {#PHYSICALDRIVESLOT} on controller {#CONTROLLERSLOT} is overheating</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>A physical drive is overheating on RAID controller {#CONTROLLERSLOT} at drive {#PHYSICALDRIVESLOT}</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
                         <trigger_prototype>
                             <expression>{BBC_TPL_HP_Hardware_raid:hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},status].str(OK,600)}=0</expression>
                             <recovery_mode>0</recovery_mode>
@@ -801,8 +891,42 @@ Bay:         {#PHYSICALDRIVEBAY}</description>
                             <tags/>
                         </trigger_prototype>
                     </trigger_prototypes>
-                    <graph_prototypes/>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Temperature for physical drive {#PHYSICALDRIVESLOT} on controller {#CONTROLLERSLOT}</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>1A7C11</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>BBC_TPL_HP_Hardware_raid</host>
+                                        <key>hp.hardware.raid.physicaldrive[{#PHYSICALDRIVESLOT},current_temperature]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
