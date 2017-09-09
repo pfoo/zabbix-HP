@@ -33,6 +33,7 @@ my %logicaldrivethash;
 
 my @physicaldriveinfos;
 my %physicaldrivethash;
+my @physicaldrivedetails;
 
 sub getInfo {
 
@@ -97,12 +98,29 @@ sub getInfo {
           'bay'           => $4,
           'capacity'      => $5,
           'status'        => $7
+        };
+
+        # For all physical drives of current controller, gather some additional informations
+        my $diskid = $1;
+        open(HPACUEXTRA, "/usr/sbin/hpssacli controller slot=$rank physicaldrive $diskid show detail |") || die "Could not run hpssacli\n";
+        while (<HPACUEXTRA>) {
+          if ( my ( $key, $value ) = /^\s+(Maximum Temperature|Current Temperature)\s+\(\w\):\s+([^\s]+)/) {
+            $key =~ s/\s+/_/g;
+            $physicaldrivethash{'id'} = $diskid;
+            $physicaldrivethash{lc $key} = $value;
+          }
         }
+        if (defined($physicaldrivethash{'id'})) {
+          push @physicaldrivedetails, { %physicaldrivethash };
+        }
+        close(HPACUEXTRA);
+
       }
     }
     close(HPACUPD);
-
   }
+
+
   if (defined($controllerthash{'slot'})) {
     push @controllerinfos, { %controllerthash };
   }
@@ -192,6 +210,10 @@ if ( $ARGV[0] and $ARGV[0] eq "discovery") {
     print "- hp.hardware.raid.physicaldrive[".$physicaldriveinfo->{id}.",status] $physicaldriveinfo->{status}\n";
   }
 
+  foreach my $physicaldrivedetail ( @physicaldrivedetails ) {
+    print "- hp.hardware.raid.physicaldrive[".$physicaldrivedetail->{id}.",current_temperature] $physicaldrivedetail->{current_temperature}\n";
+    print "- hp.hardware.raid.physicaldrive[".$physicaldrivedetail->{id}.",maximum_temperature] $physicaldrivedetail->{maximum_temperature}\n";
+  }
+
 
 }
-
