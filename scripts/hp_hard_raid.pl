@@ -37,7 +37,7 @@ my @physicaldrivedetails;
 
 sub getInfo {
 
-  open(HPACU, "/usr/sbin/hpssacli controller all show |") || die "Could not run hpssacli\n";
+  open(HPACU, "/usr/sbin/ssacli controller all show |") || die "Could not run ssacli\n";
 
   while (<HPACU>) {
 
@@ -53,7 +53,7 @@ sub getInfo {
     }
 
     # Analyze controller details
-    open(HPACUCTRL, "/usr/sbin/hpssacli controller slot=$rank show |") || die "Could not run hpssacli\n";
+    open(HPACUCTRL, "/usr/sbin/ssacli controller slot=$rank show |") || die "Could not run ssacli\n";
     while (<HPACUCTRL>) {
 
       if ( my ( $key, $value ) = /^\s+(Serial Number|Cache Serial Number|Controller Status|Hardware Revision|Firmware Version|Cache Status|Battery\/Capacitor Count|Battery\/Capacitor Status|Total Cache Size|Total Cache Memory Available):\s+([^\s]+)/) {
@@ -73,7 +73,7 @@ sub getInfo {
     close(HPACUCTRL);
 
     # For current controller, check logical drives
-    open(HPACULD, "/usr/sbin/hpssacli controller slot=$rank logicaldrive all show status |") || die "Could not run hpssacli\n";
+    open(HPACULD, "/usr/sbin/ssacli controller slot=$rank logicaldrive all show status |") || die "Could not run ssacli\n";
     while (<HPACULD>) {
       if (/\s+logicaldrive (\d)+ \(.+, (RAID )?(\d)+\):\s+(\w+)/) {
         push @logicaldriveinfos, {
@@ -87,7 +87,7 @@ sub getInfo {
     close(HPACULD);
 
     # For current controller, check physical drives
-    open(HPACUPD, "/usr/sbin/hpssacli controller slot=$rank physicaldrive all show status |") || die "Could not run hpssacli\n";
+    open(HPACUPD, "/usr/sbin/ssacli controller slot=$rank physicaldrive all show status |") || die "Could not run ssacli\n";
     while (<HPACUPD>) {
       if (/physicaldrive (.+) \(port (.+):box (\d+):bay (\d+), ([\d\.]+) (G|T)B\):\s+(\w+)/) {
         push @physicaldriveinfos, {
@@ -102,7 +102,7 @@ sub getInfo {
 
         # For all physical drives of current controller, gather some additional informations
         my $diskid = $1;
-        open(HPACUEXTRA, "/usr/sbin/hpssacli controller slot=$rank physicaldrive $diskid show detail |") || die "Could not run hpssacli\n";
+        open(HPACUEXTRA, "/usr/sbin/ssacli controller slot=$rank physicaldrive $diskid show detail |") || die "Could not run ssacli\n";
         while (<HPACUEXTRA>) {
           if ( my ( $key, $value ) = /^\s+(Maximum Temperature|Current Temperature)\s+\(\w\):\s+([^\s]+)/) {
             $key =~ s/\s+/_/g;
